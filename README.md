@@ -1,3 +1,30 @@
+## About
+This repo is forked from https://github.com/jmuppala/conFusion-React-Firebase which is 2 years old and is updated to run on newer versions of React. The original repo was provided by the instructor [jmuppala](https://github.com/jmuppala) to serve as an example of how to hook up the React client with the Node server students had built in the course. My version of the Node server is in the private repo [here](https://github.com/wleung85/coursera-confusion-node).
+
+The instructor had added new features to this version of the React client compared to the ones the students had built. The new features include:
+- **Firebase support**
+- **Favorite components**
+
+## Connecting React Client with Server
+**Important:** The database must be populated with dishes, leaders, and promotions already. Of these three types, one *must* be "featured". This is used by the client for displaying the featured items on the home page. If the database is not populated and the node server isn't running, then the React client will fail to compile.
+1. Set up Firebase with Firestore (database) and write web app credentials to /src/firebase/config.js
+```javascript
+export const config = {
+  apiKey: "Your API Key",
+  authDomain: "Your Auth Domain",
+  projectId: "Your Project ID",
+  storageBucket: "Your Storage Bucket",
+  messagingSenderId: "Your Messaging SenderId",
+  appId: "Your App ID",
+  measurementId: "Your Measurement ID"
+};
+```
+2. Install dependencies for React Client if not done already. `yarn install`
+3. Start React Client `yarn start`
+
+***
+# Original readme.md from source
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
